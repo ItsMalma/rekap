@@ -1,0 +1,47 @@
+{
+  "name": "rekap",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bunx --bun vite",
+    "build": "tsc && bunx --bun vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "bunx --bun vite preview",
+    "generate-pwa-assets": "pwa-assets-generator --preset minimal public/logo.svg"
+  },
+  "dependencies": {
+    "@mantine/carousel": "^7.9.2",
+    "@mantine/core": "^7.9.2",
+    "@mantine/dates": "^7.9.2",
+    "@mantine/form": "^7.9.2",
+    "@mantine/hooks": "^7.9.2",
+    "@mantine/modals": "^7.9.2",
+    "@mantine/notifications": "^7.9.2",
+    "@mantine/nprogress": "^7.9.2",
+    "@mantine/spotlight": "^7.9.2",
+    "@tabler/icons-react": "^3.4.0",
+    "dayjs": "^1.11.11",
+    "embla-carousel-react": "^8.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vite-pwa/assets-generator": "^0.2.4",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "postcss": "^8.4.38",
+    "postcss-preset-mantine": "^1.15.0",
+    "postcss-simple-vars": "^7.0.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-pwa": "^0.20.0"
+  }
+}
