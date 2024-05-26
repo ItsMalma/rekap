@@ -349,21 +349,19 @@ export function FormTambahKegiatan() {
                           color="gray"
                           size="5rem"
                           onClick={function () {
-                            if (navigator.mediaDevices) openModalAmbilGambar();
-                            else {
-                              if (os != "android" && os != "ios") {
-                                notifications.show({
-                                  withCloseButton: true,
-                                  withBorder: true,
-                                  color: "red",
-                                  title: "Browser tidak mendukung WebRTC!",
-                                  message:
-                                    "Perangkat atau Browser Anda tidak mendukung kamera WebRTC",
-                                  autoClose: 10000,
-                                });
-                              }
+                            if (os == "android" || os == "ios")
                               buktiWithCaptureRef.current?.click();
-                            }
+                            else if (!navigator.mediaDevices)
+                              notifications.show({
+                                withCloseButton: true,
+                                withBorder: true,
+                                color: "red",
+                                title: "Browser tidak mendukung WebRTC!",
+                                message:
+                                  "Perangkat atau Browser Anda tidak mendukung kamera WebRTC",
+                                autoClose: 10000,
+                              });
+                            else openModalAmbilGambar();
                           }}
                         >
                           <IconCamera width="70%" height="70%" />
